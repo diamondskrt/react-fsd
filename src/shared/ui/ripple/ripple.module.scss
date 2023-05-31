@@ -1,0 +1,22 @@
+@import "app/styles/core/colors";
+@import "app/styles/mixins";
+
+.ripple {
+  @include absolute-fill;
+
+  .ripple-element {
+    position: absolute;
+    border-radius: 50%;
+    background-color: $white;
+    transform: scale(0);
+    animation: ripple 0.5s linear;
+    z-index: 1;
+  }
+
+  @keyframes ripple {
+    to {
+      opacity: 0;
+      transform: scale(4.5);
+    }
+  }
+}

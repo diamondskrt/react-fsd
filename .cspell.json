@@ -1,0 +1,16 @@
+{
+  "language": "en,ru",
+  "import": ["@cspell/dict-ru_ru/cspell-ext.json"],
+  "dictionaryDefinitions": [
+    {
+      "name": "company-terms",
+      "path": ".cspell-dict-terms.txt"
+    },
+    {
+      "name": "slang-trash",
+      "path": ".cspell-dict-trash.txt"
+    }
+  ],
+  "dictionaries": ["company-terms", "slang-trash", "html", "css"],
+  "ignorePaths": [".cspell-dict*"]
+}

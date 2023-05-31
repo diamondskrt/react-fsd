@@ -1,0 +1,296 @@
+$color1: inherit;
+$color2: currentcolor;
+$font-family: monospace, monospace;
+$background-color: transparent;
+$border-color: inherit;
+
+html {
+  text-size-adjust: 100%;
+  box-sizing: border-box;
+  tab-size: 4;
+  word-break: normal;
+}
+
+* {
+  background-repeat: no-repeat;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+::after {
+  background-repeat: no-repeat;
+  box-sizing: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+::before {
+  background-repeat: no-repeat;
+  box-sizing: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+hr {
+  color: $color1;
+  height: 0;
+  overflow: visible;
+}
+
+details {
+  display: block;
+}
+
+main {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+small {
+  font-size: 80%;
+}
+
+[hidden] {
+  display: none;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+a {
+  background-color: $background-color;
+
+  &:active {
+    outline-width: 0;
+  }
+
+  &:hover {
+    outline-width: 0;
+  }
+
+  &:focus {
+    outline-width: 0;
+  }
+}
+
+code {
+  font-family: $font-family;
+}
+
+kbd {
+  font-family: $font-family;
+}
+
+pre {
+  font-family: $font-family;
+  font-size: 1em;
+}
+
+samp {
+  font-family: $font-family;
+}
+
+b {
+  font-weight: bolder;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  bottom: -0.25em;
+}
+
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+}
+
+table {
+  border-color: $border-color;
+  text-indent: 0;
+}
+
+iframe {
+  border-style: none;
+}
+
+input {
+  border-radius: 0;
+  font: inherit;
+  background-color: $background-color;
+  border-style: none;
+
+  &:focus {
+    outline-width: 0;
+  }
+}
+
+[type="number"] {
+  &::-webkit-inner-spin-button {
+    height: auto;
+  }
+
+  &::-webkit-outer-spin-button {
+    height: auto;
+  }
+}
+
+[type="search"] {
+  appearance: textfield;
+  outline-offset: -2px;
+
+  &::-webkit-search-decoration {
+    appearance: none;
+  }
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+  font: inherit;
+  background-color: $background-color;
+  border-style: none;
+
+  &:focus {
+    outline-width: 0;
+  }
+}
+
+button {
+  font: inherit;
+  overflow: visible;
+  text-transform: none;
+  cursor: pointer;
+  appearance: button;
+  background-color: $background-color;
+  border-style: none;
+
+  &::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+  }
+
+  &:-moz-focusring {
+    outline: 1px dotted ButtonText;
+  }
+
+  &:focus {
+    outline-width: 0;
+  }
+}
+
+optgroup {
+  font: inherit;
+  font-weight: 700;
+}
+
+select {
+  font: inherit;
+  text-transform: none;
+  background-color: $background-color;
+  border-style: none;
+  appearance: none;
+
+  &:focus {
+    outline-width: 0;
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+
+  &::-ms-value {
+    color: $color2;
+  }
+}
+
+[role="button"] {
+  cursor: pointer;
+}
+
+[type="button"] {
+  cursor: pointer;
+  appearance: button;
+
+  &::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+    outline: 1px dotted ButtonText;
+  }
+}
+
+[type="reset"] {
+  cursor: pointer;
+  appearance: button;
+
+  &::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+    outline: 1px dotted ButtonText;
+  }
+}
+
+[type="submit"] {
+  cursor: pointer;
+  appearance: button;
+
+  &::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+    outline: 1px dotted ButtonText;
+  }
+}
+
+legend {
+  border: 0;
+  color: $color1;
+  display: table;
+  max-width: 100%;
+  white-space: normal;
+}
+
+::-webkit-file-upload-button {
+  appearance: button;
+  color: $color1;
+  font: inherit;
+}
+
+[disabled] {
+  cursor: default;
+}
+
+img {
+  border-style: none;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+[aria-controls] {
+  cursor: pointer;
+}
+
+[aria-disabled="true"] {
+  cursor: default;
+}

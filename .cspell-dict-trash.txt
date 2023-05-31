@@ -1,0 +1,7 @@
+languagedetector
+pmmmwh
+svgr
+uuidv4
+tofixed
+testid
+autodocs

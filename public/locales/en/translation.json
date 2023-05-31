@@ -1,0 +1,10 @@
+{
+  "lang": "ru",
+  "welcomeText": "Welcome to react using react-i18next",
+  "navbar": {
+    "links": {
+      "main": "Home",
+      "about": "About company"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+$primary: #1976d2 !default;
+$secondary: #26a69a !default;
+$accent: #9c27b0 !default;
+
+// used by dark mode
+$dark-page: #121212 !default;
+$dark: #1d1d1d !default;
+$positive: #21ba45 !default;
+$negative: #c10015 !default;
+$info: #31ccec !default;
+$warning: #f2c037 !default;
+$white: #fff !default;
+
+:root {
+  --q-primary: #{$primary};
+  --q-secondary: #{$secondary};
+  --q-accent: #{$accent};
+  --q-positive: #{$positive};
+  --q-negative: #{$negative};
+  --q-info: #{$info};
+  --q-warning: #{$warning};
+  --q-dark: #{$dark};
+  --q-dark-page: #{$dark-page};
+}

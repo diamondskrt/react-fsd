@@ -1,0 +1,25 @@
+@import "app/styles/variables";
+@import "app/styles/core/colors";
+
+.btn {
+  position: relative;
+  border-radius: $button-border-radius;
+  padding: $button-padding;
+  font-size: $button-font-size;
+  line-height: $button-line-height;
+  font-weight: $button-font-weight;
+  overflow: hidden;
+  color: $white;
+
+  &.primary {
+    background-color: #1976d2;
+  }
+
+  &.secondary {
+    background-color: #26a69a;
+  }
+
+  &.accent {
+    background-color: #9c27b0;
+  }
+}

@@ -10,7 +10,7 @@ export const buildPlugins = (
 ): WebpackPluginInstance[] => {
   const { paths, isDev } = options;
 
-  return [
+  const plugins = [
     new HTMLWebpackPlugin({
       template: paths.html
     }),
@@ -21,8 +21,13 @@ export const buildPlugins = (
     }),
     new webpack.DefinePlugin({
       webpackIsDev: JSON.stringify(isDev)
-    }),
-    new ReactRefreshWebpackPlugin(),
-    new BundleAnalyzerPlugin({ openAnalyzer: false })
+    })
+
   ];
+
+  if (isDev) {
+    plugins.push(new ReactRefreshWebpackPlugin(), new BundleAnalyzerPlugin({ openAnalyzer: false }));
+  }
+
+  return plugins;
 };

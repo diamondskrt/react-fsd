@@ -1,5 +1,5 @@
 @use "sass:math";
-@import "../helpers/string";
+@import "@/app/styles/helpers/string";
 
 @mixin fg($name, $size) {
   $no-proc-not-zero: $size > 0;

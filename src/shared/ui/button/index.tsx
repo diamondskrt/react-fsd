@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import Ripple from '@/shared/ui/ripple';
-import { classNames } from '@/shared/lib';
-import classes from './button.module.scss';
+import { Ripple } from '@/shared/ui';
+import { classNames } from '@/shared/lib/class-names';
 import { ButtonProps, EColor } from './types';
+import classes from './button.module.scss';
 
-const Button: FC<ButtonProps> = (props) => {
+export const Button: FC<ButtonProps> = (props) => {
   const {
     children,
     color = EColor.PRIMARY,
@@ -30,5 +30,3 @@ const Button: FC<ButtonProps> = (props) => {
     </button>
   );
 };
-
-export default Button;

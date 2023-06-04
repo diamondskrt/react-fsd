@@ -2,3 +2,5 @@ node_modules
 /build
 .idea
 storybook-static
+.env
+.env.local

@@ -178,8 +178,22 @@ $text-weights: (
   bold: 700,
   bolder: 900,
 ) !default;
+$border-radius-base: 4px !default;
+$rounded: (
+  0: 0,
+  "sm": $border-radius-base * 0.5,
+  null: $border-radius-base,
+  "lg": $border-radius-base * 2,
+  "xl": $border-radius-base * 6,
+  "pill": 9999px,
+  "circle": 50%,
+);
 $button-border-radius: 3px !default;
 $button-padding: 4px 16px !default;
 $button-font-size: 14px !default;
 $button-line-height: 1.715em !default;
+$button-min-height: 2.572em !default;
 $button-font-weight: 400 !default;
+$card-header-padding: $space-base;
+$card-section-padding: 0 $space-base $space-base;
+$card-actions-padding: map.get($space-sm, "y") map.get($space-md, "x");

@@ -1,14 +1,13 @@
 import { FC } from 'react';
-import Navbar from '@/widgets/navbar';
-import Footer from '@/widgets/footer';
 import Routing from '@/pages';
+import { Navbar, Footer } from '@/widgets';
 import { withProviders } from '@/app/providers';
-import 'shared/config/i18n';
+import '@/shared/lib/i18n/i18n';
 import './index.scss';
 
 const App: FC = () => {
   return (
-    <div className="app q-dark">
+    <div className="app">
       <Navbar />
 
       <Routing />

@@ -21,6 +21,9 @@ module.exports = {
     '@typescript-eslint/semi': ['error', 'always'],
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/consistent-type-imports': 'off',
+    'i18next/no-literal-string': ['warn', {
+      mode: 'jsx-text-only'
+    }],
     '@typescript-eslint/member-delimiter-style': ['error', {
       multiline: {
         delimiter: 'semi',
@@ -31,8 +34,10 @@ module.exports = {
         requireLast: true
       }
     }],
-    'i18next/no-literal-string': ['warn', {
-      mode: 'jsx-text-only'
+    'react/no-unescaped-entities': ['error', {
+      forbid: [{
+        char: '&lsquo;'
+      }]
     }]
   },
   settings: {

@@ -1,0 +1,13 @@
+@use "sass:map";
+
+.round {
+  @each $round, $size in $rounded {
+    @if $round {
+      &-#{$round} {
+        border-radius: $size;
+      }
+    } @else {
+      border-radius: $size;
+    }
+  }
+}

@@ -8,8 +8,10 @@
   font-size: $button-font-size;
   line-height: $button-line-height;
   font-weight: $button-font-weight;
-  overflow: hidden;
+  min-height: $button-min-height;
+  text-transform: uppercase;
   color: $white;
+  overflow: hidden;
 
   &.primary {
     background-color: #1976d2;

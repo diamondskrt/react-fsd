@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { EColor } from './types';
 
-import Button from './';
+import { Button } from './';
 
 const meta = {
   title: 'shared/ui/Button',

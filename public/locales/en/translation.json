@@ -1,10 +1,20 @@
 {
   "lang": "ru",
   "welcomeText": "Welcome to react using react-i18next",
-  "navbar": {
-    "links": {
-      "main": "Home",
-      "about": "About company"
+  "shared": {
+    "ui": {
+      "modal": {
+        "open": "open modal",
+        "close": "ok"
+      }
+    }
+  },
+  "widgets": {
+    "navbar": {
+      "links": {
+        "main": "Home",
+        "about": "About company"
+      }
     }
   }
 }

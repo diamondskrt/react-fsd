@@ -3,6 +3,7 @@ import HTMLWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import Dotenv from 'dotenv-webpack';
 import { BuildOptions } from './types/config';
 
 export const buildPlugins = (
@@ -19,14 +20,19 @@ export const buildPlugins = (
       filename: 'css/[name].[contenthash:8].css',
       chunkFilename: 'css/[name].[contenthash:8].css'
     }),
-    new webpack.DefinePlugin({
-      webpackIsDev: JSON.stringify(isDev)
+    new Dotenv({
+      path: './.env.production'
     })
-
   ];
 
   if (isDev) {
-    plugins.push(new ReactRefreshWebpackPlugin(), new BundleAnalyzerPlugin({ openAnalyzer: false }));
+    plugins.push(
+      new ReactRefreshWebpackPlugin(),
+      new BundleAnalyzerPlugin({ openAnalyzer: false }),
+      new Dotenv({
+        path: './.env.local'
+      })
+    );
   }
 
   return plugins;

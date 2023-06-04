@@ -5,9 +5,14 @@
 @import "./flex-addon";
 @import "./core/colors";
 @import "./core/sizes";
+@import "./core/radius";
 @import "./core/typography";
 @import "./core/flex";
-@import "./core/dark";
+
+body {
+  background-color: $dark;
+  color: $white;
+}
 
 a {
   text-decoration: none;

@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Button from './';
+import { Button } from './';
 import { EColor } from './types';
 
 describe('button-ui', () => {

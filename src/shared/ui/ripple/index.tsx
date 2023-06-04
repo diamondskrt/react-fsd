@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import classes from './ripple.module.scss';
 
-const Ripple: FC = () => {
+export const Ripple: FC = () => {
   const [rippleElements, setRippleElements] = useState<JSX.Element[]>([]);
 
   const onAnimationEnd = (key: string): void => {
@@ -49,5 +49,3 @@ const Ripple: FC = () => {
     </div>
   );
 };
-
-export default Ripple;

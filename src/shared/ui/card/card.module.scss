@@ -1,0 +1,17 @@
+@import "@/app/styles/variables";
+@import "@/app/styles/core/colors";
+
+.card {
+  position: relative;
+  max-width: 560px;
+  width: 100%;
+  pointer-events: all;
+  overflow: auto;
+  will-change: scroll-position;
+  background: $dark;
+  vertical-align: top;
+}
+
+.section {
+  padding: $card-section-padding;
+}

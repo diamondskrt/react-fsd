@@ -1,21 +1,17 @@
 import { Children, ReactNode, isValidElement } from 'react';
-import { Params, Slot } from './types';
 
-export const defaultSlotName = 'default';
+const defaultSlotName = 'default';
 
-const slot = (name: string, children: ReactNode): Slot => ({
-  name,
-  children
-});
-
-export const createSlots = (children: ReactNode, params: Params, slots: Slot[]): Slot[] => {
+export const createSlots = <T>(children: ReactNode, slots: any): T => {
   Children.forEach(children, (child) => {
     if (!isValidElement(child)) return;
 
-    if (child.props.name in params) {
-      slots.push(slot(child.props.name, child.props.children));
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
+    if (child.type.name && child.type.name === 'Slot') {
+      slots[child.props.name] = child.props.children;
     } else {
-      slots.push(slot(defaultSlotName, child));
+      slots[defaultSlotName] = child;
     }
   });
 

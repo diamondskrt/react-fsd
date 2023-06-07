@@ -5,3 +5,4 @@ uuidv4
 tofixed
 testid
 autodocs
+reduxjs

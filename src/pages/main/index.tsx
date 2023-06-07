@@ -1,6 +1,7 @@
 import { FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button, Card, Modal, Slot } from '@/shared/ui';
+import { Counter } from '@/entities/counter';
 
 const MainPage: FC = () => {
   const { t } = useTranslation();
@@ -19,7 +20,9 @@ const MainPage: FC = () => {
     <section>
       <h5>{t('welcomeText')}</h5>
 
-      <Button onClick={openModal}>{t('shared.ui.modal.open')}</Button>
+      <Button onClick={openModal} className="q-mt-md">{t('shared.ui.modal.open')}</Button>
+
+      <Counter />
 
       <Modal open={showModal} closeModal={closeModal}>
         <Card>

@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { routes } from './config';
 
-const Routing: FC = () => {
+export const Routing: FC = () => {
   return (
     <Routes>
       {routes.map(({ name, params }) => (
@@ -11,5 +11,3 @@ const Routing: FC = () => {
     </Routes>
   );
 };
-
-export default Routing;

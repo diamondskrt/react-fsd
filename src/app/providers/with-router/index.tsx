@@ -1,7 +1,7 @@
 import { FC, Suspense } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
-const withRouter = (component: () => FC) => function getBrowserRouter () {
+export const withRouter = (component: () => FC) => function getBrowserRouter () {
   return (
     <BrowserRouter>
         <Suspense fallback={<div>load...</div>}>
@@ -10,5 +10,3 @@ const withRouter = (component: () => FC) => function getBrowserRouter () {
     </BrowserRouter>
   );
 };
-
-export default withRouter;

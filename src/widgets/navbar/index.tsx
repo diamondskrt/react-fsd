@@ -1,19 +1,15 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { AuthModal } from '@/features/auth-with-username';
 import { LangSwitcher } from '@/widgets';
-import { classNames } from '@/shared/lib/class-names';
-import classes from './navbar.module.scss';
+import './navbar.scoped.scss';
 
 export const Navbar: FC = () => {
   const { t } = useTranslation();
 
   return (
-    <header
-      className={classNames(
-        `${classes.navbar}`
-      )}
-    >
+    <header className="navbar">
       <div className="flex justify-between items-center text-uppercase">
         <div className="links flex">
           <Link to="/">
@@ -24,7 +20,10 @@ export const Navbar: FC = () => {
           </Link>
         </div>
 
-        <LangSwitcher />
+        <div>
+          <AuthModal />
+          <LangSwitcher className="q-ml-md" />
+        </div>
       </div>
     </header>
   );

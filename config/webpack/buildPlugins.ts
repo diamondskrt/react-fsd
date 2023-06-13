@@ -1,8 +1,8 @@
 import webpack, { WebpackPluginInstance } from 'webpack';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import HTMLWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
-import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import Dotenv from 'dotenv-webpack';
 import { BuildOptions } from './types/config';
 

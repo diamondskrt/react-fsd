@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import classes from './ripple.module.scss';
+import './ripple.scoped.scss';
 
 export const Ripple: FC = () => {
   const [rippleElements, setRippleElements] = useState<JSX.Element[]>([]);
@@ -33,7 +33,7 @@ export const Ripple: FC = () => {
     return (
       <div
         key={key}
-        className={classes['ripple-element']}
+        className="ripple-element"
         style={{ width: d, height: d, left, top }}
         onAnimationEnd={() => { onAnimationEnd(key); }}
       ></div>
@@ -42,8 +42,8 @@ export const Ripple: FC = () => {
 
   return (
     <div
+      className="ripple"
       onClick={(event) => { onRippleClick(event); }}
-      className={classes.ripple}
     >
       {rippleElements}
     </div>

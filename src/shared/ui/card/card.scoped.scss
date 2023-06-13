@@ -10,8 +10,8 @@
   will-change: scroll-position;
   background: $dark;
   vertical-align: top;
-}
 
-.section {
-  padding: $card-section-padding;
+  .card-section {
+    padding: $card-section-padding;
+  }
 }

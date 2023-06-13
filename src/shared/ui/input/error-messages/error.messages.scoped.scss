@@ -1,0 +1,10 @@
+@import "@/app/styles/core/colors";
+
+$ic-top-padding: 12px !default;
+
+.error-message {
+  position: absolute;
+  left: 0;
+  bottom: -$ic-top-padding * 0.5;
+  color: $negative;
+}

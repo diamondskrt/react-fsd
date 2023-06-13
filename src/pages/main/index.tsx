@@ -17,7 +17,7 @@ const MainPage: FC = () => {
   };
 
   return (
-    <section>
+    <section className="q-pa-md">
       <h5>{t('welcomeText')}</h5>
 
       <Button onClick={openModal} className="q-mt-md">{t('shared.ui.modal.open')}</Button>

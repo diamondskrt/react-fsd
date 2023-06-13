@@ -1,0 +1,74 @@
+@import "@/app/styles/core/colors";
+
+$input-padding: 8px 2px !default;
+$ic-top-padding: 12px !default;
+$transition-time: 0.15s !default;
+
+.input-control {
+  --input-color: #{$white};
+  --input-border-color: #{$white};
+  --label-color: grey;
+
+  position: relative;
+  padding: $ic-top-padding 0;
+
+  &.error {
+    --input-color: #{$negative};
+    --input-border-color: #{$negative};
+    --label-color: #{$negative};
+  }
+
+  &.active:not(.error) {
+    --input-border-color: #{$primary};
+    --label-color: #{$primary};
+
+    .input-field {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &.filled,
+  &.active {
+    .input-field {
+      label {
+        top: -$ic-top-padding * 0.5;
+        font-size: 80%;
+      }
+    }
+  }
+
+  .input-field {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      border-bottom: 1px solid var(--input-border-color);
+      transition: $transition-time;
+    }
+
+    input {
+      position: relative;
+      width: 100%;
+      color: var(--input-color);
+      padding: $input-padding;
+      border-bottom: 1px solid var(--input-border-color);
+    }
+
+    label {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      color: var(--label-color);
+      padding: $input-padding;
+      pointer-events: none;
+      transition: $transition-time;
+    }
+  }
+}

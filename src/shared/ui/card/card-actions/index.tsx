@@ -1,10 +1,12 @@
 import { FC } from 'react';
 import { CardActionsProps } from '../types';
-import classes from './card-actions.module.scss';
+import './card-actions.scoped.scss';
 
 export const CardActions: FC<CardActionsProps> = ({ children }) => {
+  if (!children) return null;
+
   return (
-    <div className={`${classes['card-actions']} flex justify-end`}>
+    <div className="card-actions flex justify-end">
       { children }
     </div>
   );

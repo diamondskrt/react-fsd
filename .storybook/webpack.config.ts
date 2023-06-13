@@ -1,7 +1,7 @@
 import path from 'path';
 import { Configuration } from 'webpack';
-import { BuildPaths } from '../config/build/types/config';
-import { getSassLoader, getSVGLoader } from '../config/build/buildLoaders/loaders';
+import { BuildPaths } from '../config/webpack/types/config';
+import { getSassLoader, getSVGLoader } from '../config/webpack/buildLoaders/loaders';
 
 interface StoryWebpackConfig {
   config: Configuration;

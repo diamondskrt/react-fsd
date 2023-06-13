@@ -1,6 +1,5 @@
-import { RootState } from '@/app/providers/with-store/store';
 import { createSlice } from '@reduxjs/toolkit';
-import { CounterState } from './type';
+import { CounterState } from './types';
 
 const initialState: CounterState = {
   value: 0
@@ -21,6 +20,4 @@ export const counterSlice = createSlice({
 
 export const { increment, decrement } = counterSlice.actions;
 
-export const selectCount = (state: RootState): number => state.counter.value;
-
-export default counterSlice.reducer;
+export const counterReducer = counterSlice.reducer;

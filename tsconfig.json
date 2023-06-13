@@ -4,7 +4,7 @@
     "noImplicitAny": true,
     "module": "ESNext",
     "target": "es5",
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "allowJs": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
@@ -22,6 +22,7 @@
   },
   "include": [
     "src/**/*",
+    "config/**/*",
     "jest-setup.ts",
     "jest.config.ts",
     "webpack.config.ts",

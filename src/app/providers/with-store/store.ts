@@ -1,11 +1,13 @@
-import counterReducer from '@/entities/counter/model/slice';
+import { counterReducer } from '@/entities/counter';
+import { userReducer } from '@/entities/user';
 import { configureStore } from '@reduxjs/toolkit';
 
 const webpackIsDev = process.env.MODE;
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer
+    counter: counterReducer,
+    user: userReducer
   },
   devTools: !!webpackIsDev
 });

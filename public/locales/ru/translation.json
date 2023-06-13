@@ -1,6 +1,9 @@
 {
   "lang": "en",
   "welcomeText": "Добро пожаловать в react, использующий react-i18next",
+  "auth": {
+    "signIn": "Войти"
+  },
   "shared": {
     "ui": {
       "modal": {

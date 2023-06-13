@@ -1,10 +1,12 @@
 import { FC } from 'react';
 import { CardHeaderProps } from '../types';
-import classes from './card-header.module.scss';
+import './card-header.scoped.scss';
 
 export const CardHeader: FC<CardHeaderProps> = ({ children }) => {
+  if (!children) return null;
+
   return (
-    <div className={classes['card-header']}>
+    <div className="card-header text-h6">
       { children }
     </div>
   );

@@ -21,6 +21,7 @@ module.exports = {
     '@typescript-eslint/semi': ['error', 'always'],
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/consistent-type-imports': 'off',
+    'react/display-name': 'off',
     'i18next/no-literal-string': ['warn', {
       mode: 'jsx-text-only'
     }],

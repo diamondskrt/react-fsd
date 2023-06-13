@@ -1,1 +1,2 @@
-export { Counter } from './ui/counter';
+export { Counter } from './ui';
+export { counterReducer, increment, decrement } from './model/slice';

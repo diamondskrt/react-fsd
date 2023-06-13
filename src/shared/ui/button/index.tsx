@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Ripple } from '@/shared/ui';
 import { classNames } from '@/shared/lib/class-names';
 import { ButtonProps, EColor } from './types';
-import classes from './button.module.scss';
+import './button.scoped.scss';
 
 export const Button: FC<ButtonProps> = (props) => {
   const {
@@ -15,7 +15,7 @@ export const Button: FC<ButtonProps> = (props) => {
 
   return (
     <button
-      className={classNames(`${classes.btn} ${classes[color]}`, {
+      className={classNames(`btn ${color}`, {
         className
       })}
       {...otherProps}

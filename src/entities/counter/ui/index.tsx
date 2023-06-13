@@ -1,7 +1,7 @@
 import { Button } from '@/shared/ui';
 import { FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { increment, decrement } from '../model/slice';
+import { increment, decrement } from '@/entities/counter';
 import { RootState } from '@/app/providers/with-store/store';
 
 export const Counter: FC = () => {

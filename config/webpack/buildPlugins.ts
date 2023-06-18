@@ -28,10 +28,10 @@ export const buildPlugins = (
   if (isDev) {
     plugins.push(
       new ReactRefreshWebpackPlugin(),
-      new BundleAnalyzerPlugin({ openAnalyzer: false }),
       new Dotenv({
         path: './.env.local'
-      })
+      }),
+      new BundleAnalyzerPlugin({ openAnalyzer: false })
     );
   }
 

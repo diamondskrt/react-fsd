@@ -3,11 +3,12 @@ import { CardHeader } from './card-header';
 import { CardActions } from './card-actions';
 import { createSlots } from '@/shared/lib/create-slots';
 import { classNames } from '@/shared/lib/class-names';
-import { CardProps, CardSlots } from './types';
+import { CardProps } from './types';
 import './card.scoped.scss';
+import { Slots } from '@/shared/lib/create-slots/types';
 
 export const Card: FC<CardProps> = ({ children, height, sectionClass }) => {
-  const slots: CardSlots = useMemo(() => createSlots<CardSlots>(children, {}), [children]);
+  const slots: Slots = useMemo(() => createSlots(children), [children]);
 
   return (
     <div className="card round" style={{ height }}>

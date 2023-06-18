@@ -4,7 +4,8 @@ import { initReactI18next } from 'react-i18next';
 import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-const webpackIsDev = process.env.MODE;
+// Переменная для режима разработки
+// const isDevMode = process.env.MODE;
 
 // eslint-disable-next-line @typescript-eslint/no-floating-promises
 i18n
@@ -12,8 +13,9 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    lng: 'ru',
     fallbackLng: 'ru',
-    debug: !!webpackIsDev,
+    debug: false,
     interpolation: {
       escapeValue: false
     },

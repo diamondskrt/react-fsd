@@ -12,16 +12,23 @@
   text-transform: uppercase;
   color: $white;
   overflow: hidden;
+  user-select: none;
 
-  &.primary {
+  &:disabled {
+    pointer-events: none;
+    background-color: $disabled;
+    opacity: 0.5;
+  }
+
+  &.primary:not([disabled]) {
     background-color: #1976d2;
   }
 
-  &.secondary {
+  &.secondary:not([disabled]) {
     background-color: #26a69a;
   }
 
-  &.accent {
+  &.accent:not([disabled]) {
     background-color: #9c27b0;
   }
 }

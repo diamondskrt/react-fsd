@@ -18,6 +18,7 @@ module.exports = {
   plugins: ['react', 'i18next'],
   rules: {
     semi: 'off',
+    'no-console': ['warn'],
     '@typescript-eslint/semi': ['error', 'always'],
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/consistent-type-imports': 'off',
@@ -35,6 +36,12 @@ module.exports = {
         requireLast: true
       }
     }],
+    '@typescript-eslint/no-misused-promises': [
+      'error',
+      {
+        checksVoidReturn: false
+      }
+    ],
     'react/no-unescaped-entities': ['error', {
       forbid: [{
         char: '&lsquo;'

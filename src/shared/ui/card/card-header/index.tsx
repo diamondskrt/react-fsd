@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { CardHeaderProps } from '../types';
+import { CardHeaderProps } from './types';
 import './card-header.scoped.scss';
 
 export const CardHeader: FC<CardHeaderProps> = ({ children }) => {

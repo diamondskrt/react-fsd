@@ -2,7 +2,8 @@
   "lang": "ru",
   "welcomeText": "Welcome to react using react-i18next",
   "auth": {
-    "signIn": "Sign in"
+    "signIn": "Sign in",
+    "signOut": "Sign out"
   },
   "shared": {
     "ui": {

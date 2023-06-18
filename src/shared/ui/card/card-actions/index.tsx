@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { CardActionsProps } from '../types';
+import { CardActionsProps } from './types';
 import './card-actions.scoped.scss';
 
 export const CardActions: FC<CardActionsProps> = ({ children }) => {

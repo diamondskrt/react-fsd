@@ -1,8 +1,11 @@
 import { Children, ReactNode, isValidElement } from 'react';
+import { Slots } from './types';
 
 const defaultSlotName = 'default';
 
-export const createSlots = <T>(children: ReactNode, slots: any): T => {
+export const createSlots = (children: ReactNode): Slots => {
+  const slots: Slots = {};
+
   Children.forEach(children, (child) => {
     if (!isValidElement(child)) return;
 

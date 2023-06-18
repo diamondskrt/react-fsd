@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, memo, useState, useEffect } from 'react';
+import { ChangeEvent, FC, useState, useEffect, memo } from 'react';
 import { classNames } from '@/shared/lib/class-names';
 import ErrorMessages from './error-messages';
 import { InputProps } from './types';

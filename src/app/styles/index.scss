@@ -9,9 +9,9 @@
 @import "./core/typography";
 @import "./core/flex";
 
-body {
-  background-color: $dark;
-  color: $white;
+:root {
+  --theme-background: #{$light-page};
+  --theme-color: #{$dark};
 }
 
 a {
@@ -20,4 +20,16 @@ a {
 
 .error-message {
   color: $negative;
+}
+
+.application {
+  min-height: 100vh;
+  height: 100%;
+  background-color: var(--theme-background);
+  color: var(--theme-color);
+
+  &.theme--dark {
+    --theme-background: #{$dark-page};
+    --theme-color: #{$light};
+  }
 }

@@ -1,4 +1,4 @@
-const classNameExceptions = ['className', 'sectionClass'];
+const classNameExceptions = ['className', 'sectionClass', 'variant'];
 
 export const classNames = (
   cls: string,

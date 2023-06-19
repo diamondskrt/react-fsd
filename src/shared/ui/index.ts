@@ -1,7 +1,7 @@
-export * from './button';
-export * from './card';
-export * from './form';
-export * from './input';
-export * from './modal';
-export * from './ripple';
-export * from './slot';
+export { Button } from './button';
+export { Card } from './card';
+export { Form } from './form';
+export { Input } from './input';
+export { Modal } from './modal';
+export { Ripple } from './ripple';
+export { Slot } from './slot';

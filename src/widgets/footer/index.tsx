@@ -1,5 +1,5 @@
 import { FC } from 'react';
 
 export const Footer: FC = () => {
-  return <div>Footer</div>;
+  return <div className="q-pa-md">Footer</div>;
 };

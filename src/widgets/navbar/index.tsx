@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { RootState } from '@/app/providers/with-store/store';
 import { signOut } from '@/entities/user';
 import { AuthModal } from '@/features/auth';
-import { LangSwitcher } from '@/widgets';
+import { LangSwitcher, ThemeSwitcher } from '@/widgets';
 import { Button } from '@/shared/ui';
 import './navbar.scoped.scss';
 
@@ -42,7 +42,7 @@ export const Navbar: FC = () => {
           </Link>
         </div>
 
-        <div className="flex">
+        <div className="flex items-center">
           {
             user
               ? (
@@ -55,7 +55,8 @@ export const Navbar: FC = () => {
                   </>
                 )
           }
-          <LangSwitcher className="q-ml-md" />
+          <LangSwitcher className="q-mx-md" />
+          <ThemeSwitcher />
         </div>
       </div>
     </header>

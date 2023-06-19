@@ -2,8 +2,10 @@ import { FC } from 'react';
 import { ErrorMessage } from '@/widgets';
 import ErrorBoundary from './error-boundary';
 
-export const withErrorBoundary = (component: () => FC) => () => {
+export const withErrorBoundary = (WrappedComponent: FC) => () => {
   return (
-    <ErrorBoundary fallback={<ErrorMessage />}>{component()}</ErrorBoundary>
+    <ErrorBoundary fallback={<ErrorMessage />}>
+      <WrappedComponent />
+    </ErrorBoundary>
   );
 };

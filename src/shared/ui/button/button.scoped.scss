@@ -3,8 +3,6 @@
 
 .btn {
   position: relative;
-  border-radius: $button-border-radius;
-  padding: $button-padding;
   font-size: $button-font-size;
   line-height: $button-line-height;
   font-weight: $button-font-weight;
@@ -14,6 +12,11 @@
   overflow: hidden;
   user-select: none;
 
+  &:not(.icon) {
+    border-radius: $button-border-radius;
+    padding: $button-padding;
+  }
+
   &:disabled {
     pointer-events: none;
     background-color: $disabled;
@@ -21,14 +24,31 @@
   }
 
   &.primary:not([disabled]) {
-    background-color: #1976d2;
+    background-color: $primary;
   }
 
   &.secondary:not([disabled]) {
-    background-color: #26a69a;
+    background-color: $secondary;
   }
 
   &.accent:not([disabled]) {
-    background-color: #9c27b0;
+    background-color: $accent;
+  }
+
+  &.surface:not([disabled]) {
+    background-color: $surface;
+  }
+
+  &.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    span {
+      display: flex;
+    }
   }
 }

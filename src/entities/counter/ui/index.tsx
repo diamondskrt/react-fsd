@@ -2,10 +2,10 @@ import { Button } from '@/shared/ui';
 import { FC } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { increment, decrement } from '@/entities/counter';
-import { RootState } from '@/app/providers/with-store/store';
+import { AppDispatch, RootState } from '@/app/providers/with-store/store';
 
 export const Counter: FC = () => {
-  const dispatch = useDispatch();
+  const dispatch: AppDispatch = useDispatch();
 
   const counter = useSelector((state: RootState) => state.counter.value);
 

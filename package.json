@@ -37,7 +37,6 @@
     "@svgr/webpack": "^6.2.1",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.3",
-    "@types/compose-function": "0.0.30",
     "@types/dotenv-webpack": "^7.0.4",
     "@types/jest": "^27.4.1",
     "@types/json-server": "^0.14.4",
@@ -89,13 +88,13 @@
   },
   "dependencies": {
     "axios": "^1.4.0",
-    "compose-function": "^3.0.3",
     "i18next": "^21.6.11",
     "i18next-browser-languagedetector": "^6.1.3",
     "i18next-http-backend": "^1.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-i18next": "^11.15.5",
+    "react-icons": "^4.9.0",
     "react-router-dom": "^6.2.1",
     "uuid": "^9.0.0"
   }

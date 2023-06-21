@@ -11,7 +11,7 @@ export const Input: FC<InputProps> = memo((props: InputProps) => {
 
   const [errorMessages, setErrorMessages] = useState<string[]>([]);
 
-  const { className, value, placeholder, type = 'text', rules, onChange, ...otherProps } = props;
+  const { className, value, placeholder, type = 'text', rules, setError, onChange, ...otherProps } = props;
 
   const validate = (): void => {
     if (!rules) return;
@@ -19,6 +19,8 @@ export const Input: FC<InputProps> = memo((props: InputProps) => {
     const ruleMessages = rules.map((rule) => rule(value)).filter((rule): rule is string => typeof rule === 'string');
 
     setErrorMessages(ruleMessages);
+
+    setError?.(Boolean(ruleMessages.length));
   };
 
   useEffect((): void => {

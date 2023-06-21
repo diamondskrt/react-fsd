@@ -10,8 +10,15 @@
 @import "./core/flex";
 
 :root {
-  --theme-background: #{$light-page};
-  --theme-color: #{$dark};
+  --theme-background: #{$theme-light-page};
+  --theme-transparent-background: #{$theme-dark-transparent};
+  --theme-color: #{$theme-dark};
+}
+
+.theme--dark {
+  --theme-background: #{$theme-dark-page};
+  --theme-transparent-background: #{$theme-light-transparent};
+  --theme-color: #{$theme-light};
 }
 
 a {
@@ -27,9 +34,4 @@ a {
   height: 100%;
   background-color: var(--theme-background);
   color: var(--theme-color);
-
-  &.theme--dark {
-    --theme-background: #{$dark-page};
-    --theme-color: #{$light};
-  }
 }

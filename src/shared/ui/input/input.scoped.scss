@@ -5,9 +5,9 @@ $ic-top-padding: 12px !default;
 $transition-time: 0.15s !default;
 
 .input-control {
-  --input-color: #{$white};
-  --input-border-color: #{$white};
-  --label-color: grey;
+  --input-color: var(--theme-color);
+  --input-border-color: #{$gray};
+  --label-color: #{$gray};
 
   position: relative;
   padding: $ic-top-padding 0;

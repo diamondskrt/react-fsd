@@ -19,7 +19,7 @@
 
   &:disabled {
     pointer-events: none;
-    background-color: $disabled;
+    background-color: $gray;
     opacity: 0.5;
   }
 

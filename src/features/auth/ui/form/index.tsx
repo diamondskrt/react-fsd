@@ -1,8 +1,8 @@
-import { FC, useCallback } from 'react';
+import { FC, useCallback, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 import { RootState, AppDispatch } from '@/app/providers/with-store/store';
-import { Button, Form, Input } from '@/shared/ui';
+import { Button, ErrorMessage, Input } from '@/shared/ui';
 import { setName, setPassword } from '../../model/slice';
 import { auth } from '../../model/service';
 import { AuthFormProps } from './types';
@@ -15,8 +15,9 @@ export const AuthForm: FC<AuthFormProps> = ({ closeModal }) => {
 
   const { name, password, isLoading, error } = useSelector((state: RootState) => state.auth);
 
-  // вывести значение isValid из компонента <Form />
-  // const [isValid, setIsValid] = useState(true);
+  const [nameError, setNameError] = useState(false);
+
+  const [passwordError, setPasswordError] = useState(false);
 
   const onNameChange = useCallback((value: string): void => {
     dispatch(setName(value));
@@ -37,41 +38,40 @@ export const AuthForm: FC<AuthFormProps> = ({ closeModal }) => {
     (value: string) => (value || '').length > passwordMinLength || `Пароль должен содержать больше ${passwordMinLength} символов`
   ];
 
+  const isFormValid = Boolean(!(nameError || passwordError) && name.length && password.length);
+
   const onSignIn = useCallback(async (): Promise<void> => {
-    // if (!isValid) return;
+    if (!isFormValid) return;
 
     try {
       await dispatch(auth({ name, password })).unwrap();
 
       closeModal();
     } catch (error) {}
-  }, [dispatch, name, password]);
+  }, [dispatch, name, password, nameError, passwordError]);
 
   return (
     <div className={classes.form}>
-      {/* @todo доработать сообщение об ошибке */}
-      <div className="q-mb-sm">
-        <small className="error-message">{error}</small>
-      </div>
+      <ErrorMessage message={error} className="q-mb-sm" />
 
-      <Form>
-        <Input
-          value={name}
-          rules={nameRules}
-          placeholder="Имя пользователя"
-          onChange={onNameChange}
-        />
+      <Input
+        value={name}
+        rules={nameRules}
+        placeholder="Имя пользователя"
+        setError={setNameError}
+        onChange={onNameChange}
+      />
 
-        <Input
-          value={password}
-          rules={passwordRules}
-          placeholder="Пароль"
-          className="q-mt-sm q-mb-md"
-          onChange={onPasswordChange}
-        />
-      </Form>
+      <Input
+        value={password}
+        rules={passwordRules}
+        placeholder="Пароль"
+        className="q-mt-sm q-mb-md"
+        setError={setPasswordError}
+        onChange={onPasswordChange}
+      />
 
-      <Button disabled={isLoading} onClick={onSignIn}>{t('auth.signIn')}</Button>
+      <Button disabled={isLoading || !isFormValid} onClick={onSignIn}>{t('auth.signIn')}</Button>
     </div>
   );
 };

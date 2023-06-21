@@ -8,7 +8,7 @@
   pointer-events: all;
   overflow: auto;
   will-change: scroll-position;
-  background: $dark;
+  background: var(--theme-background);
   vertical-align: top;
 
   .card-section {

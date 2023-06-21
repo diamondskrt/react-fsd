@@ -1,11 +1,9 @@
 @import "app/styles/core/colors";
 
-.navbar {
-  background-color: $accent;
-  color: $white;
-  padding: 20px;
+.appbar {
+  --appbar-color: #{$white};
 
   a {
-    color: $white;
+    color: var(--appbar-color);
   }
 }

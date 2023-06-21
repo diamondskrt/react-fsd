@@ -35,6 +35,14 @@
     background-color: $accent;
   }
 
+  &.dark:not([disabled]) {
+    background-color: $theme-dark;
+  }
+
+  &.light:not([disabled]) {
+    background-color: $theme-light;
+  }
+
   &.surface:not([disabled]) {
     background-color: $surface;
   }

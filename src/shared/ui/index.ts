@@ -1,3 +1,4 @@
+export { AppBar } from './appbar';
 export { Button } from './button';
 export { Card } from './card';
 export { ErrorMessage } from './error-message';

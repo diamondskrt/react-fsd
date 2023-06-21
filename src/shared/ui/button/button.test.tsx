@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { Button } from './';
-import { EColor } from './types';
+import { ButtonColor } from './types';
 
 describe('button-ui', () => {
   test('render', () => {
@@ -11,7 +11,7 @@ describe('button-ui', () => {
   test('set color props', () => {
     const secondaryColor = '#26a69a;';
 
-    render(<Button color={EColor.SECONDARY}>Test</Button>);
+    render(<Button color={ButtonColor.SECONDARY}>Test</Button>);
     expect(screen.getByText('Test')).toHaveStyle({
       backgroundColor: secondaryColor
     });

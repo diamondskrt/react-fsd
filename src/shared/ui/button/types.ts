@@ -2,17 +2,19 @@ import { ButtonHTMLAttributes } from 'react';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
-  color?: EColor;
-  variant?: EVariant;
+  color?: ButtonColor;
+  variant?: ButtonVariant;
 }
 
-export enum EColor {
+export enum ButtonColor {
   PRIMARY = 'primary',
   SECONDARY = 'secondary',
   ACCENT = 'accent',
+  DARK = 'dark',
+  LIGHT = 'light',
   SURFACE = 'surface',
 }
 
-export enum EVariant {
+export enum ButtonVariant {
   ICON = 'icon',
 }

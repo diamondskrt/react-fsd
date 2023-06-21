@@ -6,7 +6,8 @@ import { RootState } from '@/app/providers/with-store/store';
 import { signOut } from '@/entities/user';
 import { AuthModal } from '@/features/auth';
 import { LangSwitcher, ThemeSwitcher } from '@/widgets';
-import { Button } from '@/shared/ui';
+import { AppBar, Button } from '@/shared/ui';
+import { ButtonColor } from '@/shared/ui/button';
 import './navbar.scoped.scss';
 
 export const Navbar: FC = () => {
@@ -15,6 +16,12 @@ export const Navbar: FC = () => {
   const { t } = useTranslation();
 
   const user = useSelector((state: RootState) => state.user.userData);
+
+  const darkMode = useSelector((state: RootState) => state.switchTheme.darkMode);
+
+  const getButtonColor = (): ButtonColor => {
+    return darkMode ? ButtonColor.PRIMARY : ButtonColor.DARK;
+  };
 
   const [showModal, setShowModal] = useState(false);
 
@@ -31,7 +38,7 @@ export const Navbar: FC = () => {
   }, [dispatch]);
 
   return (
-    <header className="navbar">
+    <AppBar>
       <div className="flex justify-between items-center text-uppercase">
         <div className="links flex">
           <Link to="/">
@@ -46,19 +53,19 @@ export const Navbar: FC = () => {
           {
             user
               ? (
-                  <Button onClick={onSignOut}>{t('auth.signOut')}</Button>
+                  <Button color={getButtonColor()} onClick={onSignOut}>{t('auth.signOut')}</Button>
                 )
               : (
                   <>
-                    <Button onClick={openModal}>{t('auth.signIn')}</Button>
+                    <Button color={getButtonColor()} onClick={openModal}>{t('auth.signIn')}</Button>
                     <AuthModal open={showModal} closeModal={closeModal} />
                   </>
                 )
           }
-          <LangSwitcher className="q-mx-md" />
+          <LangSwitcher color={getButtonColor()} className="q-mx-md" />
           <ThemeSwitcher />
         </div>
       </div>
-    </header>
+    </AppBar>
   );
 };

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { EColor } from './types';
+import { ButtonColor } from './types';
 
 import { Button } from './';
 
@@ -14,7 +14,7 @@ const meta = {
         type: 'select'
       },
       description: 'Applies specified color (for example primary or secondary)',
-      defaultValue: EColor.PRIMARY
+      defaultValue: ButtonColor.PRIMARY
     },
     children: {
       description: 'Label'
@@ -29,14 +29,14 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     children: 'Button',
-    color: EColor.PRIMARY
+    color: ButtonColor.PRIMARY
   }
 };
 
 export const Secondary: Story = {
   args: {
     children: 'Button',
-    color: EColor.SECONDARY
+    color: ButtonColor.SECONDARY
   }
 };
 

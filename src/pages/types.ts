@@ -1,12 +1,12 @@
 import { RouteProps } from 'react-router-dom';
 
-export enum ERoutesName {
+export enum RoutesName {
   MAIN = 'MAIN',
   ABOUT = 'ABOUT',
   NOT_FOUND = 'NOT_FOUND'
 }
 
-export interface IRoute {
-  name: ERoutesName;
+export interface Route {
+  name: RoutesName;
   params: RouteProps;
 }
